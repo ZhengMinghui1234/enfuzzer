@@ -1,0 +1,43 @@
+#!/opt/tsmart-date/tbash
+set -eu
+. $(dirname "$0")/lib-common
+
+
+dyn-fuzz() {
+    if [[ "$1" != "-afl_mode" ]]; then
+	# local args=("$AFL_PREFIX/bin/afl-fuzz" "-m 20981520 -t 1000" "$@")
+	# print-args "AFL cmdline:" "${args[@]}"
+	# "${args[@]}"
+	tmux new -s enfuzzer -d
+
+	tmux send -t "enfuzzer" "$AFL_PREFIX/bin/afl-fuzz -i ../sym/seed -o out -m 20981520 -t 1000  -M master $@" Enter
+
+	tmux split-window -h -t "enfuzzer"
+	tmux send -t "enfuzzer" "$AFL_PREFIX/bin/aflfast-fuzz -i ../sym/seed -o out  -m 20981520 -t 1000 -S fuzzer1 $@" Enter
+	# 默认上下分屏
+	tmux split-window -t "enfuzzer"
+	tmux select-pane -L
+	tmux split-window -t "enfuzzer"
+	tmux send -t "enfuzzer" "$AFL_PREFIX/bin/fairfuzz -i ../sym/seed -o out -m 20981520 -t 1000  -S fuzzer2 $@" Enter
+	tmux select-pane -R
+	tmux send -t "enfuzzer" "$AFL_PREFIX/bin/afl-go -i ../sym/seed -o out  -m 20981520 -t 1000  -S fuzzer3 $@" Enter
+
+	tmux attach -t enfuzzer
+   
+     else
+	local args=("$AFL_PREFIX/bin/afl-fuzz" "-m 20981520"  "${@:2}" )
+       print-args "AFL cmdline:" "${args[@]}"
+        "${args[@]}"
+     fi
+}
+
+usage() {
+    local prog="$(basename "$0")"
+    log-error "Usage\n" \
+              "    $prog app\n"
+}
+
+[[ "$#" == 0 ]] && usage
+
+ . $(dirname "$0")/lib-dyn
+ dyn-fuzz "$@"
