@@ -9,7 +9,7 @@ The latest version of enfuzzer was moved to (https://yulinwei.inthefurture).
 
 | CVE ID | Projects  | CVE type |
 | :------------ |:---------------:|:---------------:|
-|CVE-2018-11097(https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
+|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
 | col 3 is      | some wordy text | $1600 |
 | col 2 is      | centered        |   $12 |
 | zebra stripes | are neat        |    $1 |
