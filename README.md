@@ -2,6 +2,7 @@
 
 tool for ensemble fuzzing
 
+The latest version of enfuzzer was moved to (https://yulinwei.inthefurture).
 
 ## Install
 To install our EnFuzzer, you can just execute in shell:
