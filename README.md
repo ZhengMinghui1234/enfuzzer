@@ -11,36 +11,19 @@ The latest version of enfuzzer was moved to (https://yulinwei.inthefurture).
 | :------------ |:---------------:|:---------------:|
 |[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
 |[CVE-2018-11212](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11212)	|   libjpeg	      |Divide-by-zero error      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
+|[CVE-2018-11213](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11213)	|   libjpeg	      |Segmentation fault      |
+|[CVE-2018-11214](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11214)	|   libjpeg	      |Segmentation fault      |
+|[CVE-2018-11363](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11363)	|   PDFGen	      |Heap buffer overflow      |
+|[CVE-2018-11364](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11364)	|   ReadStat	    |Memory leak      |
+|[CVE-2018-11365](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11365)	|   ReadStat	    |Infinite loop      |
+|[CVE-2018-11468](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11468)	|   discount	    |Heap buffer overflow      |
+|[CVE-2018-11503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11503)	|   discount	    |Heap buffer overflow      |
+|[CVE-2018-11504](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11504)	|   discount	    |Heap buffer overflow      |
+|[CVE-2018-11536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11536)	|   md4c  	      |Heap buffer overflow      |
+|[CVE-2018-11545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11545)	|   md4c  	      |Heap buffer overflow      |
+|[CVE-2018-11546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11546)	|   md4c  	      |Heap buffer overflow      |
+|[CVE-2018-11547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11547)	|   md4c  	      |Heap buffer overflow      |
+
 
 ## Install
 To install our EnFuzzer, you can just execute in shell:
