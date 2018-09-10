@@ -23,6 +23,23 @@ The latest version of enfuzzer was moved to (https://yulinwei.inthefurture).
 |[CVE-2018-11545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11545)	|   md4c  	      |Heap buffer overflow      |
 |[CVE-2018-11546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11546)	|   md4c  	      |Heap buffer overflow      |
 |[CVE-2018-11547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11547)	|   md4c  	      |Heap buffer overflow      |
+|[CVE-2018-11813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11813)	|   libjpeg       |	Large loop               |
+|[CVE-2018-12064](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12064)	|   tinyexr  	    |Heap buffer overflow      |
+|[CVE-2018-12092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12092)	|   tinyexr  	    |Heap buffer overflow      |
+|[CVE-2018-12093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12093)	|   tinyexr  	    |Memory leak      |
+|[CVE-2018-12108](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12108)	|   lepton  	    |SIGFPE           |
+|[CVE-2018-12109](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12109)	|   FLIF    	    |Heap buffer overflow      |
+|[CVE-2018-12495](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12495)	|   tinyexr       |Heap buffer overflow      |
+|[CVE-2018-12503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12503)	|   tinyexr       |Heap buffer overflow      |
+|[CVE-2018-12504](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12504)	|   tinyexr  	    |Assert failure      |
+|[CVE-2018-12687](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12687)	|   tinyexr  	    |Assert failure      |
+|[CVE-2018-12688](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12688)	|   tinyexr  	    |Segmentation fault      |
+|[CVE-2018-13030](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13030)	|  jpeg-compressor|Stack buffer overflow      |
+|[CVE-2018-13037](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13037)	|  jpeg-compressor|Stack buffer overflow      |
+|[CVE-2018-13419](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13419)	|  libsndfile     |Memory leak      |
+|[CVE-2018-13420](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13420)	|  gperftools     |Buffer overflow            |
+|[CVE-2018-13421](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13421)	|  fast-cpp-csv-parser|Buffer overflow      |
+
 
 
 ## Install
