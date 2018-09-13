@@ -84,8 +84,8 @@ build-pure() {
 	
 	rm $2
 	
-	export CC="clang"
-    export CXX="clang++"
+	export CC="$TOOL_BIN/afl-clang-fast"
+    	export CXX="$TOOL_BIN/afl-clang-fast++"
 	
 	FSANITIZE_FUZZER_FLAGS=""
 	
