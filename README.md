@@ -118,8 +118,10 @@ Enfuzzer build -gz xxx.tar.gz
 ```
 then it will automatically build three binary — one pure binary with no instrumentation for Radamsa; one binary built with afl-gcc for AFL; one binary built with sanitizer for libFuzzer.
 
-you can also build your project manually: 
-The build stage of target application is easy and totally the same as AFL, which can be completed with afl-gcc.
+You can also build your project manually. 
+The build stage of target application for afl-fuzz is easy and totally the same as AFL, which can be completed with afl-gcc.
+The build stage of target application for libfuzzer is easy too, which can be completed with libfuzzer.a.
+The build stage for pure binary with no instrumentation is the same as normal build stage of target application.
 
 For efficient fuzzing, you can build target application with ASAN or other Sanitizer. You can complete it easily with our another tool [SAFL](https://github.com/hghwng/tools-date)
 
