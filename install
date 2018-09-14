@@ -1,4 +1,11 @@
 #!/bin/bash
 
-cp -rv . /opt/enfuzzer
+rm -rf /opt/enfuzzer
+mkdir /opt/enfuzzer
+mkdir /opt/enfuzzer/bin
+
+cp -rv bin/* /opt/enfuzzer/bin/
+cp EnFuzzer /opt/enfuzzer
+
+#cp -rv . /opt/enfuzzer
 export PATH="/opt/enfuzzer:$PATH"
