@@ -111,10 +111,17 @@ Or you can directly insert the content above in configuration files such as `~/.
 
 
 ### Configure and Build
+
+Enfuzzer also provide a easy used interface for building process, you can build your project by execute in shell:
+```sh
+Enfuzzer build -gz xxx.tar.gz
+```
+then it will automatically build three binary — one pure binary with no instrumentation for Radamsa; one binary built with afl-gcc for AFL; one binary built with sanitizer for libFuzzer.
+
+you can also build your project manually: 
 The build stage of target application is easy and totally the same as AFL, which can be completed with afl-gcc.
 
 For efficient fuzzing, you can build target application with ASAN or other Sanitizer. You can complete it easily with our another tool [SAFL](https://github.com/hghwng/tools-date)
-
 
 ### Start fuzzing
 
