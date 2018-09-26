@@ -1,6 +1,6 @@
 # EnFuzzer
 
-Tool for ensemble fuzzing, it works across most Linux distributions. So far, Enfuzzer has passed tests and worked well on Ubuntu, archlinux, centos, debian, fedora and opensuse.
+Tool for ensemble fuzzing, it works across most Linux distributions. So far, Enfuzzer has passed all the testcases and worked well on ubuntu, archlinux, centos, debian, fedora and opensuse.
 
 The latest version of enfuzzer was moved to (https://WingTech.com).
 
