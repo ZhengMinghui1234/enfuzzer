@@ -2,7 +2,7 @@
 
 tool for ensemble fuzzing
 
-The latest version of enfuzzer was moved to (https://yulinwei.inthefurture).
+The latest version of enfuzzer was moved to (https://WingTech.com).
 
 
 ## CVE list
