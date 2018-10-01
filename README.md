@@ -4,6 +4,8 @@ Tool for ensemble fuzzing, it works across most Linux distributions. So far, Enf
 
 The latest version of enfuzzer was moved to http://166.111.80.238:8080/Enfuzz.php.
 
+![image](https://github.com/131250106/enfuzzer/blob/master/example/image/step1.png)
+
 More information can be found in example folder. The detail use of Enfuzzer server can be found in  https://github.com/131250106/enfuzzer/tree/master/example.
 
 
