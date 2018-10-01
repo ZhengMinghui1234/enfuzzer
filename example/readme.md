@@ -6,7 +6,7 @@ Enfuzz server can be used for free in：http://166.111.80.238:8080/Enfuzz.php .
 ## Instructions of Enfuzz Server
 
 The use of Enfuzz server can be mainly divided into 5 steps：
-1. environment building; 2. upload source code and build; 3.upload inital seeds; 4.base fuzzers selection; 5.run Enfuzz server.
+1. environment building; 2. upload source code and build; 3.upload inital seeds; 4.base fuzzers selection; 5.run Enfuzzer.
 
 ###  Step One: environment building
 
@@ -21,7 +21,7 @@ The screenshot of the user interface is shown below:
 当用户选择好待测程序的运行环境后，选择下一步，Enfuzz服务将会自动化构建系统环境。自动化构建过程信息将实时显示在用户界面中，构建成功后，界面自动跳转到下一步骤。
 
 
-### 步骤二: 源代码上传编译
+### Step Two: upload and build source code
 
 用户界面截图图下所示：
 
@@ -31,7 +31,7 @@ The screenshot of the user interface is shown below:
 
 目前支持3大主流编译流程：cmake, make 和 autotools.
 
-#### 样例讲解一 cmake编译流程的libssh（以Ubuntu系统下的为例）: 
+#### example 1: cmake编译流程的libssh（以Ubuntu系统下的为例）: 
 
 libssh项目的文件目录如下所示：
 
@@ -56,7 +56,7 @@ libssh项目的文件目录如下所示：
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/example1_3.png)
 
 
-#### 样例讲解二 make编译流程的re2（以Ubuntu系统下的为例）: 
+#### example 2: make编译流程的re2（以Ubuntu系统下的为例）: 
 
 re2项目的文件目录如下所示：
 
@@ -81,7 +81,7 @@ re2项目的文件目录如下所示：
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/example2_3.png)
 
 
-#### 样例讲解三 autotools编译流程的pcre（以Ubuntu系统下的为例）: 
+#### example 3: autotools编译流程的pcre（以Ubuntu系统下的为例）: 
 
 pcre项目的文件目录如下所示：
 
@@ -106,7 +106,7 @@ pcre项目的文件目录如下所示：
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/example3_3.png)
 
 
-### 步骤三: 初始种子上传
+### Step Three: upload initial seeds
 
 用户界面截图图下所示：
 
@@ -115,7 +115,7 @@ pcre项目的文件目录如下所示：
 初始种子对于模糊测试的性能影响十分大，用户可选择将待测程序的初始种子打包上传后（暂支持tar.gz和zip格式的压缩包），后台Enfuzz服务将自动化对初始种子进行解压去重。种子准备完毕后，界面将会自动跳转到下一步骤。
 
 
-### 步骤四: 选择基模糊测试器
+### Step Four: base fuzzer selection
 
 用户界面截图图下所示：
 
@@ -127,7 +127,7 @@ Enfuzz 服务的核心思想是基于基模糊测试器的集成，目前提供�
 用户选择完基模糊测试器，测试时间后，选择下一步。后台Enfuzz 服务将自动记录用户选择的参数，测试准备完毕后，界面将自动跳转到下一步骤。
 
 
-### 步骤五: 执行集成模糊测试服务
+### Step Five: run Enfuzzer
 
 用户界面截图图下所示：
 
@@ -140,10 +140,10 @@ Enfuzz 服务的核心思想是基于基模糊测试器的集成，目前提供�
 
 
 
-## 常见问题：
+## Q&A：
 
-问题1：编译时找不到fuzzbuild文件。
+Question 1：Can not found fuzzbuild in Step Two.
 
-解答1：检查XXX.tar.gz/XXX.zip 解压后是文件夹名是否是XXX; 
+Answer 1：检查XXX.tar.gz/XXX.zip 解压后是文件夹名是否是XXX; 
 			检查XXX文件夹下是否包含fuzzbuild自动化构建脚本；
 			检查fuzzbuild文件的执行权限。
