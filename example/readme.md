@@ -1,2 +1,2 @@
-# The WhiteBook of Enfuzzer Server
+# The Manual of Enfuzzer Server
 
