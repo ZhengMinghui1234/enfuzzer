@@ -2,9 +2,9 @@
 
 Tool for ensemble fuzzing, it works across most Linux distributions. So far, Enfuzzer has passed all the testcases and worked well on ubuntu, archlinux, centos, debian, fedora and opensuse.
 
-The latest version of enfuzzer was moved to https://WingTech.com/Enfuzz.php.
+The latest version of enfuzzer was moved to http://166.111.80.238:8080/Enfuzz.php.
 
-More information can be found in example folder. The detail use of Enfuzzer server can be found in  https://github.com/131250106/enfuzzer/blob/master/example/readme.md
+More information can be found in example folder. The detail use of Enfuzzer server can be found in  https://github.com/131250106/enfuzzer/blob/master/example/readme.md.
 
 
 ## CVE list
