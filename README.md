@@ -147,7 +147,7 @@ You need to have `tmux` installed (`sudo apt-get install tmux`), then execute:
 EnFuzzer ./app 
 ```
 
-![image](https://github.com/131250106/enfuzzer/blob/master/example/result.png)
+![image](https://github.com/131250106/enfuzzer/blob/master/example/image/result.png)
 
 #### AFL customization
 To customize parameters of AFL, add `-afl-mode` at the end of the command:
