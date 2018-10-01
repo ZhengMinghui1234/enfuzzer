@@ -7,6 +7,7 @@ The latest version of enfuzzer was moved to http://166.111.80.238:8080/Enfuzz.ph
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/step1.PNG)
 
 More information can be found in example folder. 
+
 The detail use of Enfuzz Server can be found in https://github.com/131250106/enfuzzer/tree/master/example.
 
 
