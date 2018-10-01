@@ -1,19 +1,20 @@
-# The Manual of Enfuzz Server
+# The Manual of Enfuzzer
 
-Enfuzz server is the first tool for ensemble fuzzing, which effectively improves the performance and generalization ability of each base fuzzers.
-Enfuzz server can be used for free in：http://166.111.80.238:8080/Enfuzz.php .
+Enfuzzer is the first tool for ensemble fuzzing, which effectively improves the performance and generalization ability of each base fuzzers.
+Enfuzzer can be used for free in：http://166.111.80.238:8080/Enfuzz.php .
 
-## Instructions of Enfuzz Server
+## Instructions of Enfuzzer
 
-The use of Enfuzz server can be mainly divided into 5 steps：
-1. environment building; 2. upload source code and build; 3.upload inital seeds; 4.base fuzzers selection; 5.run Enfuzzer.
+The use of Enfuzzer can be mainly divided into 5 steps：
+1. environment setting; 2. upload source code and build; 3.upload inital seeds; 4.base fuzzers selection; 5.run Enfuzzer.
 
-###  Step One: environment building
+###  Step One: environment setting
 
 The screenshot of the user interface is shown below:
 
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/step1.PNG)
 
+To improve the compatibility and robustness of Enfuzzer,  
 为提升Enfuzz服务的兼容性，扩大服务范围，本服务通过虚拟化，共享关键库等技术，为绝大多数大Linux发行版提供了技术支持。
 主要包括alpine, archlinux, centos, debian, fedora, gentoo, opensuse, oracle, plamo 和 ubuntu.
 其中 archlinux, centos, debian, fedora, opensuse 和 ubuntu 已经通过了兼容性测试。（截止到2018-10-01）
@@ -23,7 +24,7 @@ The screenshot of the user interface is shown below:
 
 ### Step Two: upload and build source code
 
-用户界面截图图下所示：
+The screenshot of the user interface is shown below:
 
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/step2.PNG)
 
@@ -108,7 +109,7 @@ pcre项目的文件目录如下所示：
 
 ### Step Three: upload initial seeds
 
-用户界面截图图下所示：
+The screenshot of the user interface is shown below:
 
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/step2.PNG)
 
@@ -117,25 +118,23 @@ pcre项目的文件目录如下所示：
 
 ### Step Four: base fuzzer selection
 
-用户界面截图图下所示：
+The screenshot of the user interface is shown below:
 
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/step4.PNG)
 
-Enfuzz 服务的核心思想是基于基模糊测试器的集成，目前提供的基模糊测试器选择包括基于bitmap的分支敏感的mutation-based模糊测试器AFL, AFLFast, FairFuzz; 基于各种sanitizer的块敏感的mutation-based模糊测试器libFuzzer; 基于generation-based模糊测试器Radamsa。
-后续会有更多的基模糊测试器集成进来。
+The core idea of Enfuzzer is to ensemble different kinds of base fuzzers as diverse as possible. Currently, basing on bitmap, mutation-based fuzzers -- AFL, AFLFasts and FairFuzz; basing on various sanitizers, mutation-based fuzzer -- libFuzzer; as well as generation-based fuzzer -- Radamsa. More base fuzzers will be included later.
 
 用户选择完基模糊测试器，测试时间后，选择下一步。后台Enfuzz 服务将自动记录用户选择的参数，测试准备完毕后，界面将自动跳转到下一步骤。
 
 
 ### Step Five: run Enfuzzer
 
-用户界面截图图下所示：
+The screenshot of the user interface is shown below:
 
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/step5.PNG)
 
 
-用户确认基本测试信息后，选择执行集成模糊测试服务。 后台Enfuzz服务将自动化对待测程序进行集成模糊测试，测试过程的基本信息（路径覆盖信息和unique crashes信息）将会实时显示在界面中。当集成模糊测试服务完成后，Enfuzz 服务将自动发送邮件至用户邮箱。
-
+After confirming the basic fuzzing information, the user chooses to execute the Enfuzzer service. The Enfuzz server will automatically fuzz target application through ensemble method. The basic information of the fuzzing process (path coverage information and unique crashes information) will be displayed in the interface in real time. When Enfuzzer is finished, the server will automatically send an email to the user's mailbox.
 
 
 
