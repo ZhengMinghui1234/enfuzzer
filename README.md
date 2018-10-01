@@ -4,7 +4,7 @@ Tool for ensemble fuzzing, it works across most Linux distributions. So far, Enf
 
 The latest version of enfuzzer was moved to https://WingTech.com/Enfuzz.php.
 
-More information can be found in example folder. The detail use of Enfuzzer server can be found in  https://github.com/121350106/enfuzzer/blob/master/example/readme.md
+More information can be found in example folder. The detail use of Enfuzzer server can be found in  https://github.com/131250106/enfuzzer/blob/master/example/readme.md
 
 
 ## CVE list
