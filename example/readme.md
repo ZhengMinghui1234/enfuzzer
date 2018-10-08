@@ -16,7 +16,7 @@ The screenshot of the user interface is shown below:
 
 To improve the compatibility and robustness of Enfuzzer,  we design and implement a runtime layer, which contains shared libraries used by upper layers. This enables compatibility across Linux distributions.
 The main Linux distributions are included, such as alpine, archlinux, centos, debian, fedora, gentoo, opensuse, oracle, plamo and ubuntu.
-In addition to, Ubuntu, archlinux, centos, debian, fedora and opensuse are tested.(As of 2018-10-01)
+In addition to, Ubuntu, archlinux, centos, debian, gentoo, fedora and opensuse are tested.(As of 2018-10-01)
 
 After the user selects the operating system of the target application and clicks the Next button, the Enfuzz server will automatically build the system environment. The automated build process information will be displayed in the user interface in real time. After the environment setting process is successful, the interface will automatically redirect to the next step.
 
