@@ -2,7 +2,7 @@
 
 Tool for ensemble fuzzing, it works across most Linux distributions. So far, Enfuzzer has passed all the testcases and worked well on ubuntu, archlinux, centos, debian, fedora, gentoo and opensuse.
 
-The latest version of enfuzzer was moved to http://166.111.80.238:8080/Enfuzz.php.
+The latest version of enfuzzer was moved to http://wingtecher.com/Enfuzz/.
 
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/step1.PNG)
 
