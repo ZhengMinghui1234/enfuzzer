@@ -859,7 +859,7 @@ We found that most existing work with symbolic execution engine performs very we
 This is because that the base code of the four apllications (who, uniq, base64 and md5sum) in LAVA-M are small (2K LOC ~ 4K LOC), symbolic execution works well on them, but usually performs the opposite or even hangs on real projects whose code base easily reach 100k LoC. 
 However, for AFL (or some other state-of-the-art fuzzers) which is widely used in real industry projects, it works much better.
 To avoid the bias, we also choose some real projects with larger base codes(80K ~ 220K) from google's fuzzing-test-suit.
-Currently, due to time limitation, we only select four projects for response demonstration. More projects contained in Google's fuzzing-test-suit would be updated continuesly.
+Currently, due to time limitation of rebuttal period, we only select seven projects for response demonstration.
 
 
 
@@ -913,7 +913,7 @@ Currently, due to time limitation, we only select four projects for response dem
     <td class="tg-0pky">631</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="4">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
+    <td class="tg-c3ow" rowspan="7">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
     <td class="tg-0pky">libxml2</td>
     <td class="tg-0pky">230232</td>
     <td class="tg-0pky">14888</td>
@@ -948,6 +948,33 @@ Currently, due to time limitation, we only select four projects for response dem
     <td class="tg-0pky">3956</td>
     <td class="tg-0pky">3243</td>
     <td class="tg-0pky">4682</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">boringssl</td>
+    <td class="tg-0pky">135131</td>
+    <td class="tg-0pky">3286</td>
+    <td class="tg-0pky">2816</td>
+    <td class="tg-0pky">3393</td>
+    <td class="tg-0pky">2973</td>
+    <td class="tg-0pky">3927</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">libarchive</td>
+    <td class="tg-0pky">148420</td>
+    <td class="tg-0pky">12842</td>
+    <td class="tg-0pky">10111</td>
+    <td class="tg-0pky">12594</td>
+    <td class="tg-0pky">11984</td>
+    <td class="tg-0pky">14501</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">proj</td>
+    <td class="tg-0pky">30899</td>
+    <td class="tg-0pky">342</td>
+    <td class="tg-0pky">302</td>
+    <td class="tg-0pky">322</td>
+    <td class="tg-0pky">323</td>
+    <td class="tg-0pky">399</td>
   </tr>
 </table>
 		
@@ -1038,6 +1065,33 @@ Currently, due to time limitation, we only select four projects for response dem
     <td class="tg-0pky">4021</td>
     <td class="tg-0pky">3892</td>
     <td class="tg-0pky">4292</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">boringssl</td>
+    <td class="tg-0pky">135131</td>
+    <td class="tg-0pky">3834</td>
+    <td class="tg-0pky">3635</td>
+    <td class="tg-0pky">3894</td>
+    <td class="tg-0pky">3680</td>
+    <td class="tg-0pky">4013</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">libarchive</td>
+    <td class="tg-0pky">148420</td>
+    <td class="tg-0pky">10580</td>
+    <td class="tg-0pky">9267</td>
+    <td class="tg-0pky">8646</td>
+    <td class="tg-0pky">9416</td>
+    <td class="tg-0pky">11793</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">proj</td>
+    <td class="tg-0pky">30899</td>
+    <td class="tg-0pky">267</td>
+    <td class="tg-0pky">267</td>
+    <td class="tg-0pky">267</td>
+    <td class="tg-0pky">261</td>
+    <td class="tg-0pky">267</td>
   </tr>
 </table>
 
@@ -1137,5 +1191,32 @@ Currently, due to time limitation, we only select four projects for response dem
     <td class="tg-0pky">4</td>
     <td class="tg-0pky">3</td>
     <td class="tg-0lax">9</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">boringssl</td>
+    <td class="tg-0pky">135131</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">libarchive</td>
+    <td class="tg-0pky">148420</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">1</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">proj</td>
+    <td class="tg-0pky">30899</td>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">2</td>
   </tr>
 </table>
