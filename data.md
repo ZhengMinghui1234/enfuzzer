@@ -859,7 +859,7 @@ We found that most existing work with symbolic execution engine performs very we
 This is because that the base code of the four apllications (who, uniq, base64 and md5sum) in LAVA-M are small (2K LOC ~ 4K LOC), symbolic execution works well on them, but usually performs the opposite or even hangs on real projects whose code base easily reach 100k LoC. 
 However, for AFL (or some other state-of-the-art fuzzers) which is widely used in real industry projects, it works much better.
 To avoid the bias, we also choose some real projects with larger base codes(80K ~ 220K) from google's fuzzing-test-suit.
-Currently, due to time limitation of rebuttal period, we only select seven projects for response demonstration.
+The results on the projects with different typical sizes (we choose projects with typical sizes because of time limitation of the rebuttal response) demonstrate that  EnFuzz can integrate different fuzzers, and improve the performance and the bug detection efficiency of QSYM alone.
 
 
 
