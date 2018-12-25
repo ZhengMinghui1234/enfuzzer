@@ -1195,6 +1195,7 @@ Currently, due to time limitation of rebuttal period, we only select seven proje
   <tr>
     <td class="tg-0pky">boringssl</td>
     <td class="tg-0pky">135131</td>
+    <td class="tg-0pky">unknown</td>
     <td class="tg-0pky">0</td>
     <td class="tg-0pky">0</td>
     <td class="tg-0pky">0</td>
@@ -1204,6 +1205,7 @@ Currently, due to time limitation of rebuttal period, we only select seven proje
   <tr>
     <td class="tg-0pky">libarchive</td>
     <td class="tg-0pky">148420</td>
+    <td class="tg-0pky">unknown</td>
     <td class="tg-0pky">0</td>
     <td class="tg-0pky">0</td>
     <td class="tg-0pky">0</td>
@@ -1213,6 +1215,7 @@ Currently, due to time limitation of rebuttal period, we only select seven proje
   <tr>
     <td class="tg-0pky">proj</td>
     <td class="tg-0pky">30899</td>
+    <td class="tg-0pky">unknown</td>
     <td class="tg-0pky">2</td>
     <td class="tg-0pky">0</td>
     <td class="tg-0pky">1</td>
