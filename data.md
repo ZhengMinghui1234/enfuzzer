@@ -1030,7 +1030,7 @@ Currently, due to time limitation of rebuttal period, we only select seven proje
     <td class="tg-0pky">1301</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="4">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
+    <td class="tg-c3ow" rowspan="7">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
     <td class="tg-0pky">libxml2</td>
     <td class="tg-0pky">230232</td>
     <td class="tg-0pky">15204</td>
@@ -1152,7 +1152,7 @@ Currently, due to time limitation of rebuttal period, we only select seven proje
     <td class="tg-0lax">26</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="4">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
+    <td class="tg-c3ow" rowspan="7">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
     <td class="tg-0pky">libxml2</td>
     <td class="tg-0pky">230232</td>
     <td class="tg-0pky">unknown</td>
