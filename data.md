@@ -858,8 +858,8 @@ For fair comparisons, we run each tool with four CPU cores used: AFL(4 instances
 We found that most existing work with symbolic execution engine performs very well on LAVA-M. Fuzzing without symbolic execution (such as original AFL, FairFuzz, libFuzzer, etc.) usually perform worse on LAVA-M, but achieve much successes in real industry pratice.
 This is because that the base code of the four apllications (who, uniq, base64 and md5sum) in LAVA-M are small (2K LOC ~ 4K LOC), symbolic execution works well on them, but usually performs the opposite or even hangs on real projects whose code base easily reach 100k LoC. 
 However, for AFL (or some other state-of-the-art fuzzers) which is widely used in real industry projects, it works much better.
-To avoid the bias, we also choose some real projects with larger base codes(80K ~ 220K) from google's fuzzing-test-suit.
-The results on the projects with different typical sizes (we choose projects with typical sizes because of time limitation of the rebuttal response) demonstrate that  EnFuzz can integrate different fuzzers, and improve the performance and the bug detection efficiency of QSYM alone.
+To avoid the bias, we also evaluat them on real projects with larger base codes(80K ~ 220K) from google's fuzzing-test-suit.
+These results still demonstrate that EnFuzz has better robustness and always outperforms each base fuzzers.
 
 
 
@@ -913,7 +913,7 @@ The results on the projects with different typical sizes (we choose projects wit
     <td class="tg-0pky">631</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="7">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
+    <td class="tg-c3ow" rowspan="12">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
     <td class="tg-0pky">libxml2</td>
     <td class="tg-0pky">230232</td>
     <td class="tg-0pky">14888</td>
@@ -976,6 +976,51 @@ The results on the projects with different typical sizes (we choose projects wit
     <td class="tg-0pky">323</td>
     <td class="tg-0pky">399</td>
   </tr>
+	<tr>
+    <td class="tg-0pky">woff2</td>
+    <td class="tg-0pky">3434</td>
+    <td class="tg-0pky">23</td>
+    <td class="tg-0pky">16</td>
+    <td class="tg-0pky">20</td>
+    <td class="tg-0pky">24</td>
+    <td class="tg-0pky">24</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">libssh</td>
+    <td class="tg-0pky">49624</td>
+    <td class="tg-0pky">110</td>
+    <td class="tg-0pky">102</td>
+    <td class="tg-0pky">110</td>
+    <td class="tg-0pky">149</td>
+    <td class="tg-0pky">152</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">lcms</td>
+    <td class="tg-0pky">36237</td>
+    <td class="tg-0pky">1682</td>
+    <td class="tg-0pky">1393</td>
+    <td class="tg-0pky">1491</td>
+    <td class="tg-0pky">1552</td>
+    <td class="tg-0pky">1871</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">guetzli</td>
+    <td class="tg-0pky">7055</td>
+    <td class="tg-0pky">3435</td>
+    <td class="tg-0pky">2550</td>
+    <td class="tg-0pky">1818</td>
+    <td class="tg-0pky">2981</td>
+    <td class="tg-0pky">3472</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">c-ares</td>
+    <td class="tg-0pky">118550</td>
+    <td class="tg-0pky">146</td>
+    <td class="tg-0pky">116</td>
+    <td class="tg-0pky">146</td>
+    <td class="tg-0pky">132</td>
+    <td class="tg-0pky">159</td>
+  </tr>
 </table>
 		
 
@@ -1030,7 +1075,7 @@ The results on the projects with different typical sizes (we choose projects wit
     <td class="tg-0pky">1301</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="7">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
+    <td class="tg-c3ow" rowspan="12">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
     <td class="tg-0pky">libxml2</td>
     <td class="tg-0pky">230232</td>
     <td class="tg-0pky">15204</td>
@@ -1093,6 +1138,51 @@ The results on the projects with different typical sizes (we choose projects wit
     <td class="tg-0pky">261</td>
     <td class="tg-0pky">267</td>
   </tr>
+	<tr>
+    <td class="tg-0pky">woff2</td>
+    <td class="tg-0pky">3434</td>
+    <td class="tg-0pky">120</td>
+    <td class="tg-0pky">120</td>
+    <td class="tg-0pky">120</td>
+    <td class="tg-0pky">121</td>
+    <td class="tg-0pky">121</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">libssh</td>
+    <td class="tg-0pky">49624</td>
+    <td class="tg-0pky">614</td>
+    <td class="tg-0pky">614</td>
+    <td class="tg-0pky">614</td>
+    <td class="tg-0pky">636</td>
+    <td class="tg-0pky">640</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">lcms</td>
+    <td class="tg-0pky">36237</td>
+    <td class="tg-0pky">3985</td>
+    <td class="tg-0pky">3681</td>
+    <td class="tg-0pky">3642</td>
+    <td class="tg-0pky">3731</td>
+    <td class="tg-0pky">4152</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">guetzli</td>
+    <td class="tg-0pky">7055</td>
+    <td class="tg-0pky">3189</td>
+    <td class="tg-0pky">2723</td>
+    <td class="tg-0pky">1514</td>
+    <td class="tg-0pky">3011</td>
+    <td class="tg-0pky">3246</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">c-ares</td>
+    <td class="tg-0pky">118550</td>
+    <td class="tg-0pky">285</td>
+    <td class="tg-0pky">276</td>
+    <td class="tg-0pky">285</td>
+    <td class="tg-0pky">285</td>
+    <td class="tg-0pky">285</td>
+  </tr>
 </table>
 
 
@@ -1152,7 +1242,7 @@ The results on the projects with different typical sizes (we choose projects wit
     <td class="tg-0lax">26</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" rowspan="7">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
+    <td class="tg-c3ow" rowspan="12">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
     <td class="tg-0pky">libxml2</td>
     <td class="tg-0pky">230232</td>
     <td class="tg-0pky">unknown</td>
@@ -1221,5 +1311,55 @@ The results on the projects with different typical sizes (we choose projects wit
     <td class="tg-0pky">1</td>
     <td class="tg-0pky">0</td>
     <td class="tg-0pky">2</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">woff2</td>
+    <td class="tg-0pky">3434</td>
+    <td class="tg-0pky">unknown</td>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">1</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">libssh</td>
+    <td class="tg-0pky">49624</td>
+    <td class="tg-0pky">unknown</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">2</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">lcms</td>
+    <td class="tg-0pky">36237</td>
+    <td class="tg-0pky">unknown</td>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">3</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">guetzli</td>
+    <td class="tg-0pky">7055</td>
+    <td class="tg-0pky">unknown</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">0</td>
+    <td class="tg-0pky">1</td>
+  </tr>
+	<tr>
+    <td class="tg-0pky">c-ares</td>
+    <td class="tg-0pky">118550</td>
+    <td class="tg-0pky">unknown</td>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">4</td>
   </tr>
 </table>
