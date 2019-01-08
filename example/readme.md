@@ -1,7 +1,7 @@
 # The Manual of Enfuzzer
 
 Enfuzzer is the first tool for ensemble fuzzing, which effectively improves the performance and generalization ability of each base fuzzers.
-Enfuzzer can be used for free in：http://166.111.80.238:8080/Enfuzz.php.
+Enfuzzer can be used for free in：http://wingtecher.com/Enfuzz/.
 
 ## Instructions of Enfuzzer
 
