@@ -1,12 +1,6 @@
 # Supported CVE vulnerabilities of Enfuzz and each base fuzzers on real-world projects evaluation
 
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
 <table class="tg">
   <tr>
     <th class="tg-0pky"></th>
@@ -168,7 +162,7 @@
 
 
 
-# Evaluation in Google's fuzzing-test-suite.
+# Statistical test result for 10 times
 
 ## Average and range number of paths covered by each tool in ten times 24-hours experiments
 
@@ -221,516 +215,127 @@
 | woff2      | 2  [1 - 4]          | 0  [0 - 0]          | 0  [0 - 0]          | 8  [2 - 11]          | 2  [0 - 4]              | 0  [0 - 0]       | 3  [1- 4]           | 23  [20 - 27]       | 27  [27 - 31]       |
 
 
-
-# Evaluation in LAVA-M with qsym
-
-For fair comparisons, we run each tool with four CPU cores used: AFL(4 instances of AFL), AFLFast(4 instances of AFLfast), Fairfuzz(4 instances of fairfuzz), QSYM(2qsym +2 instances of AFL), enfuzz(1 AFL + 1 AFLfast + 1 Fairfuzz + 1 qsym).
-
-We found that most existing work with symbolic execution engine performs very well on LAVA-M. Fuzzing without symbolic execution (such as original AFL, FairFuzz, libFuzzer, etc.) usually perform worse on LAVA-M, but achieve much successes in real industry pratice.
-This is because that the base code of the four apllications (who, uniq, base64 and md5sum) in LAVA-M are small (2K LOC ~ 4K LOC), symbolic execution works well on them, but usually performs the opposite or even hangs on real projects whose code base easily reach 100k LoC. 
-However, for AFL (or some other state-of-the-art fuzzers) which is widely used in real industry projects, it works much better.
-To avoid the bias, we also evaluat them on real projects with larger base codes(80K ~ 220K) from google's fuzzing-test-suit.
-These results still demonstrate that EnFuzz has better robustness and always outperforms each base fuzzers.
+# Seed synchronization parameter study
+We have tried different values of period time. The synchronization period only affacted the path coverage in the begining, but affacted little in the end. The 120s was the best value on most applications. Let's take Libpng for example, the effects of different period is presented as below:
+![image](https://github.com/131250106/enfuzzer/blob/master/example/image/libpng.PNG)
 
 
+# Deployed in industry use for bug detection
+Enfuzz have already been deployed in industry practice, and more new CVEs have been reported. The CVE list will be updated continually, as shown below:
 
-## number of paths covered by each tool with four cpu cores in 24 hours
-<table class="tg">
-  <tr>
-    <th class="tg-0pky"></th>
-    <th class="tg-0pky"></th>
-    <th class="tg-0pky">code lines (LOC)</th>
-    <th class="tg-0pky">AFL</th>
-    <th class="tg-0pky">aflfast</th>
-    <th class="tg-0pky">fairfuzz</th>
-    <th class="tg-0pky">qsym</th>
-    <th class="tg-0pky">enfuzz(AFL+AFLfast+Fairfuzz+qsym)</th>
-  </tr>
-  <tr>
-    <td class="tg-c3ow" rowspan="4">LAVA-M</td>
-    <td class="tg-0pky">base64</td>
-    <td class="tg-0pky">2064</td>
-    <td class="tg-0pky">1078</td>
-    <td class="tg-0pky">1065</td>
-    <td class="tg-0pky">1080</td>
-    <td class="tg-0pky">1143</td>
-    <td class="tg-0pky">1243</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">md5sum</td>
-    <td class="tg-0pky">3184</td>
-    <td class="tg-0pky">589</td>
-    <td class="tg-0pky">589</td>
-    <td class="tg-0pky">601</td>
-    <td class="tg-0pky">1062</td>
-    <td class="tg-0pky">1198</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">who</td>
-    <td class="tg-0pky">6913</td>
-    <td class="tg-0pky">4599</td>
-    <td class="tg-0pky">4585</td>
-    <td class="tg-0pky">4593</td>
-    <td class="tg-0pky">4621</td>
-    <td class="tg-0pky">4806</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">uniq</td>
-    <td class="tg-0pky">2040</td>
-    <td class="tg-0pky">476</td>
-    <td class="tg-0pky">453</td>
-    <td class="tg-0pky">471</td>
-    <td class="tg-0pky">593</td>
-    <td class="tg-0pky">631</td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow" rowspan="12">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
-    <td class="tg-0pky">libxml2</td>
-    <td class="tg-0pky">230232</td>
-    <td class="tg-0pky">14888</td>
-    <td class="tg-0pky">13804</td>
-    <td class="tg-0pky">14498</td>
-    <td class="tg-0pky">13172</td>
-    <td class="tg-0pky">18738</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">pcre</td>
-    <td class="tg-0pky">70161</td>
-    <td class="tg-0pky">79581</td>
-    <td class="tg-0pky">66894</td>
-    <td class="tg-0pky">71671</td>
-    <td class="tg-0pky">60348</td>
-    <td class="tg-0pky">82642</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">re2</td>
-    <td class="tg-0pky">28267</td>
-    <td class="tg-0pky">12093</td>
-    <td class="tg-0pky">10863</td>
-    <td class="tg-0pky">12085</td>
-    <td class="tg-0pky">10492</td>
-    <td class="tg-0pky">14453</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">openssl</td>
-    <td class="tg-0pky">304904</td>
-    <td class="tg-0pky">4090</td>
-    <td class="tg-0pky">3425</td>
-    <td class="tg-0pky">3956</td>
-    <td class="tg-0pky">3243</td>
-    <td class="tg-0pky">4682</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">boringssl</td>
-    <td class="tg-0pky">135131</td>
-    <td class="tg-0pky">3286</td>
-    <td class="tg-0pky">2816</td>
-    <td class="tg-0pky">3393</td>
-    <td class="tg-0pky">2973</td>
-    <td class="tg-0pky">3927</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">libarchive</td>
-    <td class="tg-0pky">148420</td>
-    <td class="tg-0pky">12842</td>
-    <td class="tg-0pky">10111</td>
-    <td class="tg-0pky">12594</td>
-    <td class="tg-0pky">11984</td>
-    <td class="tg-0pky">14501</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">proj</td>
-    <td class="tg-0pky">30899</td>
-    <td class="tg-0pky">342</td>
-    <td class="tg-0pky">302</td>
-    <td class="tg-0pky">322</td>
-    <td class="tg-0pky">323</td>
-    <td class="tg-0pky">399</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">woff2</td>
-    <td class="tg-0pky">3434</td>
-    <td class="tg-0pky">23</td>
-    <td class="tg-0pky">16</td>
-    <td class="tg-0pky">20</td>
-    <td class="tg-0pky">24</td>
-    <td class="tg-0pky">24</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">libssh</td>
-    <td class="tg-0pky">49624</td>
-    <td class="tg-0pky">110</td>
-    <td class="tg-0pky">102</td>
-    <td class="tg-0pky">110</td>
-    <td class="tg-0pky">149</td>
-    <td class="tg-0pky">152</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">lcms</td>
-    <td class="tg-0pky">36237</td>
-    <td class="tg-0pky">1682</td>
-    <td class="tg-0pky">1393</td>
-    <td class="tg-0pky">1491</td>
-    <td class="tg-0pky">1552</td>
-    <td class="tg-0pky">1871</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">guetzli</td>
-    <td class="tg-0pky">7055</td>
-    <td class="tg-0pky">3435</td>
-    <td class="tg-0pky">2550</td>
-    <td class="tg-0pky">1818</td>
-    <td class="tg-0pky">2981</td>
-    <td class="tg-0pky">3472</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">c-ares</td>
-    <td class="tg-0pky">118550</td>
-    <td class="tg-0pky">146</td>
-    <td class="tg-0pky">116</td>
-    <td class="tg-0pky">146</td>
-    <td class="tg-0pky">132</td>
-    <td class="tg-0pky">159</td>
-  </tr>
-</table>
-		
+## CVE list
 
+| CVE ID | Projects  | CVE type |
+| :------------ |:---------------:|:---------------:|
+|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
+|[CVE-2018-11212](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11212)	|   libjpeg	      |Divide-by-zero error      |
+|[CVE-2018-11213](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11213)	|   libjpeg	      |Segmentation fault      |
+|[CVE-2018-11214](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11214)	|   libjpeg	      |Segmentation fault      |
+|[CVE-2018-11363](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11363)	|   PDFGen	      |Heap buffer overflow      |
+|[CVE-2018-11364](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11364)	|   ReadStat	    |Memory leak      |
+|[CVE-2018-11365](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11365)	|   ReadStat	    |Infinite loop      |
+|[CVE-2018-11468](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11468)	|   discount	    |Heap buffer overflow      |
+|[CVE-2018-11503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11503)	|   discount	    |Heap buffer overflow      |
+|[CVE-2018-11504](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11504)	|   discount	    |Heap buffer overflow      |
+|[CVE-2018-11536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11536)	|   md4c  	      |Heap buffer overflow      |
+|[CVE-2018-11545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11545)	|   md4c  	      |Heap buffer overflow      |
+|[CVE-2018-11546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11546)	|   md4c  	      |Heap buffer overflow      |
+|[CVE-2018-11547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11547)	|   md4c  	      |Heap buffer overflow      |
+|[CVE-2018-11813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11813)	|   libjpeg       |	Large loop               |
+|[CVE-2018-12064](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12064)	|   tinyexr  	    |Heap buffer overflow      |
+|[CVE-2018-12092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12092)	|   tinyexr  	    |Heap buffer overflow      |
+|[CVE-2018-12093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12093)	|   tinyexr  	    |Memory leak      |
+|[CVE-2018-12108](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12108)	|   lepton  	    |SIGFPE           |
+|[CVE-2018-12109](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12109)	|   FLIF    	    |Heap buffer overflow      |
+|[CVE-2018-12495](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12495)	|   tinyexr       |Heap buffer overflow      |
+|[CVE-2018-12503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12503)	|   tinyexr       |Heap buffer overflow      |
+|[CVE-2018-12504](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12504)	|   tinyexr  	    |Assert failure      |
+|[CVE-2018-12687](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12687)	|   tinyexr  	    |Assert failure      |
+|[CVE-2018-12688](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12688)	|   tinyexr  	    |Segmentation fault      |
+|[CVE-2018-13030](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13030)	|  jpeg-compressor|Stack buffer overflow      |
+|[CVE-2018-13037](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13037)	|  jpeg-compressor|Stack buffer overflow      |
+|[CVE-2018-13419](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13419)	|  libsndfile     |Memory leak      |
+|[CVE-2018-13420](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13420)	|  gperftools     |Buffer overflow            |
+|[CVE-2018-13421](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13421)	|  fast-cpp-csv-parser|Buffer overflow      |
+|[CVE-2018-13794](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13794)|cat-image|Buffer overflow|
+|[CVE-2018-13795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13795)|gravity|Endless loop|
+|[CVE-2018-13833](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13833)|cmft|Stack buffer overflow|
+|[CVE-2018-13843](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13843)|htslib|Memory Leak|
+|[CVE-2018-13844](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13844)|htslib|Memory Leak|
+|[CVE-2018-13845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13845)|htslib|Buffer overflow|
+|[CVE-2018-13846](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13846)|Bento4|Buffer overread|
+|[CVE-2018-13847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13847)|Bento4|SEGV|
+|[CVE-2018-13848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13848)|Bento4|SEGV|
+|[CVE-2018-13996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13996)|genann|Stack buffer overflow|
+|[CVE-2018-13997](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13997)|genann|SEGV|
+|[CVE-2018-14047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14047)|pngwriter|SEGV|
+|[CVE-2018-14048](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14048)|libpng|SEGV|
+|[CVE-2018-14049](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14049)|libwav|SEGV|
+|[CVE-2018-14050](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14050)|libwav|SEGV|
+|[CVE-2018-14051](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14051)|libwav|infinite loop|
+|[CVE-2018-14052](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14052)|libwav|SEGV|
+|[CVE-2018-14072](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14072)|libsixel|Memory leak|
+|[CVE-2018-14073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14073)|libsixel|Memory leak|
+|[CVE-2018-14521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14521)|aubio|SEGV signal|
+|[CVE-2018-14522](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14522)|aubio|SEGV signal|
+|[CVE-2018-14523](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14523)|aubio|Global buffer overflow|
+|[CVE-2018-14531](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14531)|Bento4|Buffer Overflow|
+|[CVE-2018-14532](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14532)|Bento4|Buffer Overflow|
+|[CVE-2018-14549](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14549)|libwav|SEGV|
+|[CVE-2018-14550](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14550)|libpng|Stack buffer overflow|
+|[CVE-2018-14562](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14562)|THULAC|SEGV|
+|[CVE-2018-14563](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14563)|THULAC|alloc-dealloc-mismatch|
+|[CVE-2018-14564](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14564)|THULAC|SEGV|
+|[CVE-2018-14565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14565)|THULAC|Heap buffer overflow|
+|[CVE-2018-14584](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14584)|Bento4|Buffer overflow|
+|[CVE-2018-14585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14585)|Bento4|Buffer overflow|
+|[CVE-2018-14586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14586)|Bento4|SEGV|
+|[CVE-2018-14587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14587)|Bento4|Buffer overflow|
+|[CVE-2018-14588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14588)|Bento4|SEGV|
+|[CVE-2018-14589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14589)|Bento4|Heap buffer overflow|
+|[CVE-2018-14590](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14590)|Bento4|SEGV|
+|[CVE-2018-14736](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14736)|pbc|Buffer overflow|
+|[CVE-2018-14737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14737)|pbc|SEGV|
+|[CVE-2018-14738](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14738)|pbc|SEGV|
+|[CVE-2018-14739](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14739)|pbc|SEGV|
+|[CVE-2018-14740](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14740)|pbc|SEGV|
+|[CVE-2018-14741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14741)|pbc|SEGV|
+|[CVE-2018-14742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14742)|pbc|SEGV|
+|[CVE-2018-14743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14743)|pbc|SEGV|
+|[CVE-2018-14744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14744)|pbc|Use after free|
+|[CVE-2018-14944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14944)|jpeg_encoder|SEGV|
+|[CVE-2018-14945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14945)|jpeg_encoder|heap buffer overflow|
+|[CVE-2018-14946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14946)|pdf2json|Alloc_dealloc_mismatch|
+|[CVE-2018-14947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14947)|pdf2json|Alloc_dealloc_mismatch|
+|[CVE-2018-14948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14948)|sound|Alloc-dealloc-mismatch|
+|[CVE-2018-16781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16781)|ffjpeg|FPE signal|
+|[CVE-2018-16782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16782)|imageworsener overflow|
+|[CVE-2018-17042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17042)|dbf2txt|infinite loop	|
+|[CVE-2018-17043](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17043)|doc2txt|heap buffer overflow	|
+|[CVE-2018-17072](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17072)|json|buffer over-read	|
+|[CVE-2018-17073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17073)|bitmap|NULL pointer dereference|
+|[CVE-2018-17093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17093)|xar|NULL pointer dereference	|
+|[CVE-2018-17094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17094)|xar|SEGV|
+|[CVE-2018-17095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17095)|xar|Heap buffer overflow|
+|[CVE-2018-17338](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17338)|pdfalto|heap buffer overflow	|
+|[CVE-2018-17427](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17427)|simdcomp|heap buffer overflow	|
+|[CVE-2018-17854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17854)|simdcomp|heap buffer overflow	|
+|[CVE-2018-18581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18581)|LuPng|heap buffer overflow	|
+|[CVE-2018-18582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18582)|LuPng|heap buffer overflow	|
+|[CVE-2018-18583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18583)|LuPng|heap buffer overflow	|
+|[CVE-2018-18834](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18834)|libiec61850|heap buffer overflow	|
+|[CVE-2018-18937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18937)|libiec61850|SEGV	|
+|[CVE-2018-19093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19093)|libiec61850|SEGV	|
+|[CVE-2018-19121](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19121)|libiec61850|SEGV	|
+|[CVE-2018-19122](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19122)|libiec61850|SEGV	|
+|[CVE-2018-19184](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19184)|geth|SEGVh|
+|[CVE-2018-19185](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19185)|aleth|Failure of transaction		|
+|[CVE-2018-19330](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19330)|mxml|detected memory leaks	|
+|[CVE-2018-19764](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19764)|mxml|stack buffer overflow		|
+|[CVE-2018-20004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20004)|mxml|heap-use-after-free		|
+|[CVE-2018-7705](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7705)|linux-kernel_3.10|memory leak			|
+|[CVE-2018-7706](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7706)|linux-kernel_3.10|memory leak			|
+|[CVE-2018-7707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7707)|linux-kernel_3.10|memory leak			|
+|[CVE-2018-7708](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7708)|linux-kernel_3.10|memory leak			|
+|[CVE-2018-7709](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7709)|linux-kernel_4.20|invalid free		|	
 
-## number of branches covered by each tool with four cpu cores in 24 hours
-<table class="tg">
-  <tr>
-    <th class="tg-0pky"></th>
-    <th class="tg-0pky"></th>
-    <th class="tg-0pky">code lines (LOC)</th>
-    <th class="tg-0pky">AFL</th>
-    <th class="tg-0pky">aflfast</th>
-    <th class="tg-0pky">fairfuzz</th>
-    <th class="tg-0pky">qsym</th>
-    <th class="tg-0pky">enfuzz(AFL+aflfast+fairfuzz+qsym)</th>
-  </tr>
-  <tr>
-    <td class="tg-c3ow" rowspan="4">LAVA-M</td>
-    <td class="tg-0pky">base64</td>
-    <td class="tg-0pky">2064</td>
-    <td class="tg-0pky">388</td>
-    <td class="tg-0pky">358</td>
-    <td class="tg-0pky">389</td>
-    <td class="tg-0pky">960</td>
-    <td class="tg-0pky">993</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">md5sum</td>
-    <td class="tg-0pky">3184</td>
-    <td class="tg-0pky">230</td>
-    <td class="tg-0pky">208</td>
-    <td class="tg-0pky">241</td>
-    <td class="tg-0pky">2591</td>
-    <td class="tg-0pky">2856</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">who</td>
-    <td class="tg-0pky">6913</td>
-    <td class="tg-0pky">813</td>
-    <td class="tg-0pky">791</td>
-    <td class="tg-0pky">811</td>
-    <td class="tg-0pky">876</td>
-    <td class="tg-0pky">909</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">uniq</td>
-    <td class="tg-0pky">2040</td>
-    <td class="tg-0pky">1085</td>
-    <td class="tg-0pky">992</td>
-    <td class="tg-0pky">1079</td>
-    <td class="tg-0pky">1273</td>
-    <td class="tg-0pky">1301</td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow" rowspan="12">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
-    <td class="tg-0pky">libxml2</td>
-    <td class="tg-0pky">230232</td>
-    <td class="tg-0pky">15204</td>
-    <td class="tg-0pky">14845</td>
-    <td class="tg-0pky">14298</td>
-    <td class="tg-0pky">14747</td>
-    <td class="tg-0pky">16932</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">pcre</td>
-    <td class="tg-0pky">70161</td>
-    <td class="tg-0pky">50558</td>
-    <td class="tg-0pky">48004</td>
-    <td class="tg-0pky">49430</td>
-    <td class="tg-0pky">36208</td>
-    <td class="tg-0pky">52751</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">re2</td>
-    <td class="tg-0pky">28267</td>
-    <td class="tg-0pky">17918</td>
-    <td class="tg-0pky">17069</td>
-    <td class="tg-0pky">17360</td>
-    <td class="tg-0pky">16323</td>
-    <td class="tg-0pky">18376</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">openssl</td>
-    <td class="tg-0pky">304904</td>
-    <td class="tg-0pky">4079</td>
-    <td class="tg-0pky">4004</td>
-    <td class="tg-0pky">4021</td>
-    <td class="tg-0pky">3892</td>
-    <td class="tg-0pky">4292</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">boringssl</td>
-    <td class="tg-0pky">135131</td>
-    <td class="tg-0pky">3834</td>
-    <td class="tg-0pky">3635</td>
-    <td class="tg-0pky">3894</td>
-    <td class="tg-0pky">3680</td>
-    <td class="tg-0pky">4013</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">libarchive</td>
-    <td class="tg-0pky">148420</td>
-    <td class="tg-0pky">10580</td>
-    <td class="tg-0pky">9267</td>
-    <td class="tg-0pky">8646</td>
-    <td class="tg-0pky">9416</td>
-    <td class="tg-0pky">11793</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">proj</td>
-    <td class="tg-0pky">30899</td>
-    <td class="tg-0pky">267</td>
-    <td class="tg-0pky">267</td>
-    <td class="tg-0pky">267</td>
-    <td class="tg-0pky">261</td>
-    <td class="tg-0pky">267</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">woff2</td>
-    <td class="tg-0pky">3434</td>
-    <td class="tg-0pky">120</td>
-    <td class="tg-0pky">120</td>
-    <td class="tg-0pky">120</td>
-    <td class="tg-0pky">121</td>
-    <td class="tg-0pky">121</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">libssh</td>
-    <td class="tg-0pky">49624</td>
-    <td class="tg-0pky">614</td>
-    <td class="tg-0pky">614</td>
-    <td class="tg-0pky">614</td>
-    <td class="tg-0pky">636</td>
-    <td class="tg-0pky">640</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">lcms</td>
-    <td class="tg-0pky">36237</td>
-    <td class="tg-0pky">3985</td>
-    <td class="tg-0pky">3681</td>
-    <td class="tg-0pky">3642</td>
-    <td class="tg-0pky">3731</td>
-    <td class="tg-0pky">4152</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">guetzli</td>
-    <td class="tg-0pky">7055</td>
-    <td class="tg-0pky">3189</td>
-    <td class="tg-0pky">2723</td>
-    <td class="tg-0pky">1514</td>
-    <td class="tg-0pky">3011</td>
-    <td class="tg-0pky">3246</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">c-ares</td>
-    <td class="tg-0pky">118550</td>
-    <td class="tg-0pky">285</td>
-    <td class="tg-0pky">276</td>
-    <td class="tg-0pky">285</td>
-    <td class="tg-0pky">285</td>
-    <td class="tg-0pky">285</td>
-  </tr>
-</table>
-
-
-
-## number of unique bugs detected by each tool with four cpu cores in 24 hours
-<table class="tg">
-  <tr>
-    <th class="tg-0pky"></th>
-    <th class="tg-0pky"></th>
-    <th class="tg-0pky">code lines (LOC)</th>
-    <th class="tg-0pky">Total bug</th>
-    <th class="tg-0pky">AFL</th>
-    <th class="tg-0pky">aflfast</th>
-    <th class="tg-0pky">fairfuzz</th>
-    <th class="tg-0pky">qsym</th>
-    <th class="tg-0lax">enfuzz(AFL+aflfast+fairfuzz+qsym)</th>
-  </tr>
-  <tr>
-    <td class="tg-c3ow" rowspan="4">LAVA-M</td>
-    <td class="tg-0pky">base64</td>
-    <td class="tg-0pky">2064</td>
-    <td class="tg-0pky">44</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">41</td>
-    <td class="tg-0lax">42</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">md5sum</td>
-    <td class="tg-0pky">3184</td>
-    <td class="tg-0pky">57</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">57</td>
-    <td class="tg-0lax">57</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">who</td>
-    <td class="tg-0pky">6913</td>
-    <td class="tg-0pky">2136</td>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">1047</td>
-    <td class="tg-0lax">1053</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">uniq</td>
-    <td class="tg-0pky">2040</td>
-    <td class="tg-0pky">28</td>
-    <td class="tg-0pky">11</td>
-    <td class="tg-0pky">5</td>
-    <td class="tg-0pky">7</td>
-    <td class="tg-0pky">25</td>
-    <td class="tg-0lax">26</td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow" rowspan="12">Google's fuzzing<br>&nbsp;&nbsp;test suit</td>
-    <td class="tg-0pky">libxml2</td>
-    <td class="tg-0pky">230232</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0lax">1</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">pcre</td>
-    <td class="tg-0pky">70161</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">6</td>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">5</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0lax">10</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">re2</td>
-    <td class="tg-0pky">28267</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0lax">1</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">openssl</td>
-    <td class="tg-0pky">304904</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">5</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">4</td>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0lax">9</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">boringssl</td>
-    <td class="tg-0pky">135131</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">libarchive</td>
-    <td class="tg-0pky">148420</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">1</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">proj</td>
-    <td class="tg-0pky">30899</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">2</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">woff2</td>
-    <td class="tg-0pky">3434</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">1</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">libssh</td>
-    <td class="tg-0pky">49624</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">2</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">lcms</td>
-    <td class="tg-0pky">36237</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">3</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">guetzli</td>
-    <td class="tg-0pky">7055</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">0</td>
-    <td class="tg-0pky">1</td>
-  </tr>
-	<tr>
-    <td class="tg-0pky">c-ares</td>
-    <td class="tg-0pky">118550</td>
-    <td class="tg-0pky">unknown</td>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">4</td>
-  </tr>
-</table>
