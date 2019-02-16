@@ -95,6 +95,36 @@ The detail use of Enfuzz Server can be found in https://github.com/131250106/enf
 |[CVE-2018-14947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14947)|pdf2json|Alloc_dealloc_mismatch|
 |[CVE-2018-14948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14948)|sound|Alloc-dealloc-mismatch|
 
+|[CVE-2018-16781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16781)|ffjpeg|FPE signal|
+|[CVE-2018-16782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16782)|imageworsener overflow|
+|[CVE-2018-17042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17042)|dbf2txt|infinite loop	|
+|[CVE-2018-17043](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17043)|doc2txt|heap buffer overflow	|
+|[CVE-2018-17072](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17072)|json|buffer over-read	|
+|[CVE-2018-17073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17073)|bitmap|NULL pointer dereference|
+|[CVE-2018-17093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17093)|xar|NULL pointer dereference	|
+|[CVE-2018-17094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17094)|xar|SEGV|
+|[CVE-2018-17095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17095)|xar|Heap buffer overflow|
+|[CVE-2018-17338](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17338)|pdfalto|heap buffer overflow	|
+|[CVE-2018-17427](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17427)|simdcomp|heap buffer overflow	|
+|[CVE-2018-17854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17854)|simdcomp|heap buffer overflow	|
+|[CVE-2018-18581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18581)|LuPng|heap buffer overflow	|
+|[CVE-2018-18582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18582)|LuPng|heap buffer overflow	|
+|[CVE-2018-18583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18583)|LuPng|heap buffer overflow	|
+|[CVE-2018-18834](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18834)|libiec61850|heap buffer overflow	|
+|[CVE-2018-18937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18937)|libiec61850|SEGV	|
+|[CVE-2018-19093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19093)|libiec61850|SEGV	|
+|[CVE-2018-19121](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19121)|libiec61850|SEGV	|
+|[CVE-2018-19122](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19122)|libiec61850|SEGV	|
+|[CVE-2018-19184](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19184)|geth|SEGVh|
+|[CVE-2018-19185](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19185)|aleth|Failure of transaction		|
+|[CVE-2018-19330](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19330)|mxml|detected memory leaks	|
+|[CVE-2018-19764](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19764)|mxml|stack buffer overflow		|
+|[CVE-2018-20004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20004)|mxml|heap-use-after-free		|
+|[CVE-2018-7705](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7705)|linux-kernel_3.10|memory leak			|
+|[CVE-2018-7706](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7706)|linux-kernel_3.10|memory leak			|
+|[CVE-2018-7707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7707)|linux-kernel_3.10|memory leak			|
+|[CVE-2018-7708](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7708)|linux-kernel_3.10|memory leak			|
+|[CVE-2018-7709](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7709)|linux-kernel_4.20|invalid free		|	
 
 ## Install
 To install our EnFuzzer, you can just execute in shell:
