@@ -251,8 +251,8 @@
 | wpantund      | 0 [0 - 0]      | 0 [0 - 0]          | 0 [0 - 0]           | 0 [0 - 0]            | 0 [0 - 0]               | 0 [0 - 0]         | 0 [0 - 0] | 0 [0 - 0] | 0 [0 - 0] | 0 [0 - 0] | 0 [0 - 0] |
 
 # Seed synchronization parameter study
-We have tried different values of period time. The synchronization period only affacted the path coverage in the begining, but affacted little in the end. The 120s was the best value on most applications. Let's take Libpng for example, the effects of different period is presented as below:
-![image](https://github.com/131250106/enfuzzer/blob/master/example/image/libpng.PNG)
+We have tried different values of period time. The synchronization period only affacted the performance in the begining, but affacted little in the end. The 120s was the best value on most applications. Let's take branches coverage of Libjpeg for example, the effects of different period is presented as below:
+![image](https://github.com/131250106/enfuzzer/blob/master/example/image/libjpeg.png)
 
 
 # Deployed in industry use for bug detection
