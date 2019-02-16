@@ -1,6 +1,6 @@
 # Supported CVE vulnerabilities of Enfuzz and each base fuzzers on real-world projects evaluation
 
-
+## Number of unique bugs detected by Enfuzz and each base fuzzer 
 <table class="tg">
   <tr>
     <th class="tg-0pky"></th>
@@ -160,6 +160,516 @@
 
 
 
+## Detailed information of each bugs and CVEs
+<table>
+ <col width=177 style='mso-width-source:userset;mso-width-alt:5664;width:133pt'>
+ <col width=133 style='mso-width-source:userset;mso-width-alt:4256;width:100pt'>
+ <col width=72 span=6 style='width:54pt'>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 width=177 style='height:14.25pt;width:133pt'></td>
+  <td width=133 style='width:100pt'></td>
+  <td width=72 style='width:54pt'>AFL</td>
+  <td width=72 style='width:54pt'>AFLFast</td>
+  <td width=72 style='width:54pt'>FairFuzz</td>
+  <td width=72 style='width:54pt'>libFuzzer</td>
+  <td width=72 style='width:54pt'>QYSM</td>
+  <td width=72 style='width:54pt'>Enfuzz</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=6 height=114 class=xl65 style='height:85.5pt'>Bento4_mp4compact</td>
+  <td>CVE-2018-14584</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl66 width=133 style='height:14.25pt;width:100pt'>CVE-2018-14585</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14586<span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14587</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl66 width=133 style='height:14.25pt;width:100pt'>CVE-2018-14588</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14589</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=7 height=133 class=xl65 style='height:99.75pt'>Bento4_mp4tag</td>
+  <td>CVE-2018-14590</td>
+  <td class=xl67>√</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl66 width=133 style='height:14.25pt;width:100pt'>CVE-2018-14531</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14532</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14846</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl66 width=133 style='height:14.25pt;width:100pt'>CVE-2018-14847</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14848</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-1</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=2 height=38 class=xl65 style='height:28.5pt'>bitmap</td>
+  <td>CVE-2018-17073</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-2</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=2 height=38 class=xl65 style='height:28.5pt'>cmft</td>
+  <td>CVE-2018-13833</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-3</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=2 height=38 class=xl65 style='height:28.5pt'>ffjpeg</td>
+  <td>CVE-2018-16781</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-4</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=3 height=57 class=xl65 style='height:42.75pt'>flif</td>
+  <td>CVE-2018-12109</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-5</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-6</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl65 style='height:14.25pt'>imageworsener</td>
+  <td>CVE-2018-16782</td>
+  <td class=xl67>√</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=5 height=95 class=xl65 style='height:71.25pt'>libjpeg-05-2018</td>
+  <td>CVE-2018-11212</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-11213</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-11214</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-11813</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-7</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=4 height=76 class=xl65 style='height:57.0pt'>libiec61850</td>
+  <td>CVE-2018-18834</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-18937</td>
+  <td class=xl67>√</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-19093</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-8</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=3 height=57 class=xl65 style='height:42.75pt'>libpng</td>
+  <td>CVE-2018-14048</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14550</td>
+  <td class=xl67>√</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-9</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=5 height=95 class=xl65 style='height:71.25pt'>libwav_wavgain</td>
+  <td>CVE-2018-14052</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14549</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-10</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-11</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-12</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=5 height=95 class=xl65 style='height:71.25pt'>libwav_wavinfo</td>
+  <td>CVE-2018-14049</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14050</td>
+  <td class=xl67>√</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14051</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-13</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-14</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=4 height=76 class=xl65 style='height:57.0pt'>LuPng</td>
+  <td>CVE-2018-18581</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-18582<span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-18583</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-15</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=9 height=171 class=xl65 style='height:128.25pt'>pbc</td>
+  <td>CVE-2018-14736</td>
+  <td colspan=3 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14737</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14738</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14739</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14740</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14741<span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14742<span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14743</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>CVE-2018-14744</td>
+  <td colspan=4 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td rowspan=2 height=38 class=xl65 style='height:28.5pt'>pngwriter</td>
+  <td>CVE-2018-14047</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 style='height:14.25pt'>bug-16</td>
+  <td colspan=4 style='mso-ignore:colspan'></td>
+  <td class=xl67>√</td>
+  <td class=xl67>√</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=177 style='width:133pt'></td>
+  <td width=133 style='width:100pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
 
 
 # Statistical test result for 10 times
@@ -258,119 +768,22 @@ We have tried different values of period time. The synchronization period only a
 # Deployed in industry use for bug detection
 Enfuzz have already been deployed in industry practice, and more new CVEs have been reported. The CVE list will be updated continually, as shown below:
 
-## CVE list
-
-| CVE ID | Projects  | CVE type |
-| :------------ |:---------------:|:---------------:|
-|[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097)	|   cstring	      |Memory leak      |
-|[CVE-2018-11212](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11212)	|   libjpeg	      |Divide-by-zero error      |
-|[CVE-2018-11213](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11213)	|   libjpeg	      |Segmentation fault      |
-|[CVE-2018-11214](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11214)	|   libjpeg	      |Segmentation fault      |
-|[CVE-2018-11363](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11363)	|   PDFGen	      |Heap buffer overflow      |
-|[CVE-2018-11364](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11364)	|   ReadStat	    |Memory leak      |
-|[CVE-2018-11365](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11365)	|   ReadStat	    |Infinite loop      |
-|[CVE-2018-11468](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11468)	|   discount	    |Heap buffer overflow      |
-|[CVE-2018-11503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11503)	|   discount	    |Heap buffer overflow      |
-|[CVE-2018-11504](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11504)	|   discount	    |Heap buffer overflow      |
-|[CVE-2018-11536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11536)	|   md4c  	      |Heap buffer overflow      |
-|[CVE-2018-11545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11545)	|   md4c  	      |Heap buffer overflow      |
-|[CVE-2018-11546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11546)	|   md4c  	      |Heap buffer overflow      |
-|[CVE-2018-11547](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11547)	|   md4c  	      |Heap buffer overflow      |
-|[CVE-2018-11813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11813)	|   libjpeg       |	Large loop               |
-|[CVE-2018-12064](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12064)	|   tinyexr  	    |Heap buffer overflow      |
-|[CVE-2018-12092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12092)	|   tinyexr  	    |Heap buffer overflow      |
-|[CVE-2018-12093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12093)	|   tinyexr  	    |Memory leak      |
-|[CVE-2018-12108](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12108)	|   lepton  	    |SIGFPE           |
-|[CVE-2018-12109](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12109)	|   FLIF    	    |Heap buffer overflow      |
-|[CVE-2018-12495](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12495)	|   tinyexr       |Heap buffer overflow      |
-|[CVE-2018-12503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12503)	|   tinyexr       |Heap buffer overflow      |
-|[CVE-2018-12504](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12504)	|   tinyexr  	    |Assert failure      |
-|[CVE-2018-12687](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12687)	|   tinyexr  	    |Assert failure      |
-|[CVE-2018-12688](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12688)	|   tinyexr  	    |Segmentation fault      |
-|[CVE-2018-13030](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13030)	|  jpeg-compressor|Stack buffer overflow      |
-|[CVE-2018-13037](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13037)	|  jpeg-compressor|Stack buffer overflow      |
-|[CVE-2018-13419](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13419)	|  libsndfile     |Memory leak      |
-|[CVE-2018-13420](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13420)	|  gperftools     |Buffer overflow            |
-|[CVE-2018-13421](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13421)	|  fast-cpp-csv-parser|Buffer overflow      |
-|[CVE-2018-13794](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13794)|cat-image|Buffer overflow|
-|[CVE-2018-13795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13795)|gravity|Endless loop|
-|[CVE-2018-13833](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13833)|cmft|Stack buffer overflow|
-|[CVE-2018-13843](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13843)|htslib|Memory Leak|
-|[CVE-2018-13844](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13844)|htslib|Memory Leak|
-|[CVE-2018-13845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13845)|htslib|Buffer overflow|
-|[CVE-2018-13846](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13846)|Bento4|Buffer overread|
-|[CVE-2018-13847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13847)|Bento4|SEGV|
-|[CVE-2018-13848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13848)|Bento4|SEGV|
-|[CVE-2018-13996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13996)|genann|Stack buffer overflow|
-|[CVE-2018-13997](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13997)|genann|SEGV|
-|[CVE-2018-14047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14047)|pngwriter|SEGV|
-|[CVE-2018-14048](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14048)|libpng|SEGV|
-|[CVE-2018-14049](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14049)|libwav|SEGV|
-|[CVE-2018-14050](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14050)|libwav|SEGV|
-|[CVE-2018-14051](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14051)|libwav|infinite loop|
-|[CVE-2018-14052](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14052)|libwav|SEGV|
-|[CVE-2018-14072](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14072)|libsixel|Memory leak|
-|[CVE-2018-14073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14073)|libsixel|Memory leak|
-|[CVE-2018-14521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14521)|aubio|SEGV signal|
-|[CVE-2018-14522](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14522)|aubio|SEGV signal|
-|[CVE-2018-14523](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14523)|aubio|Global buffer overflow|
-|[CVE-2018-14531](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14531)|Bento4|Buffer Overflow|
-|[CVE-2018-14532](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14532)|Bento4|Buffer Overflow|
-|[CVE-2018-14549](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14549)|libwav|SEGV|
-|[CVE-2018-14550](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14550)|libpng|Stack buffer overflow|
-|[CVE-2018-14562](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14562)|THULAC|SEGV|
-|[CVE-2018-14563](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14563)|THULAC|alloc-dealloc-mismatch|
-|[CVE-2018-14564](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14564)|THULAC|SEGV|
-|[CVE-2018-14565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14565)|THULAC|Heap buffer overflow|
-|[CVE-2018-14584](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14584)|Bento4|Buffer overflow|
-|[CVE-2018-14585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14585)|Bento4|Buffer overflow|
-|[CVE-2018-14586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14586)|Bento4|SEGV|
-|[CVE-2018-14587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14587)|Bento4|Buffer overflow|
-|[CVE-2018-14588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14588)|Bento4|SEGV|
-|[CVE-2018-14589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14589)|Bento4|Heap buffer overflow|
-|[CVE-2018-14590](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14590)|Bento4|SEGV|
-|[CVE-2018-14736](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14736)|pbc|Buffer overflow|
-|[CVE-2018-14737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14737)|pbc|SEGV|
-|[CVE-2018-14738](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14738)|pbc|SEGV|
-|[CVE-2018-14739](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14739)|pbc|SEGV|
-|[CVE-2018-14740](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14740)|pbc|SEGV|
-|[CVE-2018-14741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14741)|pbc|SEGV|
-|[CVE-2018-14742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14742)|pbc|SEGV|
-|[CVE-2018-14743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14743)|pbc|SEGV|
-|[CVE-2018-14744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14744)|pbc|Use after free|
-|[CVE-2018-14944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14944)|jpeg_encoder|SEGV|
-|[CVE-2018-14945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14945)|jpeg_encoder|heap buffer overflow|
-|[CVE-2018-14946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14946)|pdf2json|Alloc_dealloc_mismatch|
-|[CVE-2018-14947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14947)|pdf2json|Alloc_dealloc_mismatch|
-|[CVE-2018-14948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14948)|sound|Alloc-dealloc-mismatch|
-|[CVE-2018-16781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16781)|ffjpeg|FPE signal|
-|[CVE-2018-16782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16782)|imageworsener overflow|
-|[CVE-2018-17042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17042)|dbf2txt|infinite loop	|
-|[CVE-2018-17043](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17043)|doc2txt|heap buffer overflow	|
-|[CVE-2018-17072](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17072)|json|buffer over-read	|
-|[CVE-2018-17073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17073)|bitmap|NULL pointer dereference|
-|[CVE-2018-17093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17093)|xar|NULL pointer dereference	|
-|[CVE-2018-17094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17094)|xar|SEGV|
-|[CVE-2018-17095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17095)|xar|Heap buffer overflow|
-|[CVE-2018-17338](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17338)|pdfalto|heap buffer overflow	|
-|[CVE-2018-17427](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17427)|simdcomp|heap buffer overflow	|
-|[CVE-2018-17854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17854)|simdcomp|heap buffer overflow	|
-|[CVE-2018-18581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18581)|LuPng|heap buffer overflow	|
-|[CVE-2018-18582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18582)|LuPng|heap buffer overflow	|
-|[CVE-2018-18583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18583)|LuPng|heap buffer overflow	|
-|[CVE-2018-18834](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18834)|libiec61850|heap buffer overflow	|
-|[CVE-2018-18937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18937)|libiec61850|SEGV	|
-|[CVE-2018-19093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19093)|libiec61850|SEGV	|
-|[CVE-2018-19121](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19121)|libiec61850|SEGV	|
-|[CVE-2018-19122](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19122)|libiec61850|SEGV	|
-|[CVE-2018-19184](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19184)|geth|SEGVh|
-|[CVE-2018-19185](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19185)|aleth|Failure of transaction		|
-|[CVE-2018-19330](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19330)|mxml|detected memory leaks	|
-|[CVE-2018-19764](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19764)|mxml|stack buffer overflow		|
-|[CVE-2018-20004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20004)|mxml|heap-use-after-free		|
-|[CVE-2018-7705](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7705)|linux-kernel_3.10|memory leak			|
-|[CVE-2018-7706](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7706)|linux-kernel_3.10|memory leak			|
-|[CVE-2018-7707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7707)|linux-kernel_3.10|memory leak			|
-|[CVE-2018-7708](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7708)|linux-kernel_3.10|memory leak			|
-|[CVE-2018-7709](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7709)|linux-kernel_4.20|invalid free		|	
-
+[CVE-2018-11097](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11097), [CVE-2018-11212](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11212), [CVE-2018-11213](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11213), [CVE-2018-11214](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11214), [CVE-2018-11363](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11363), [CVE-2018-11364](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11364)
+[CVE-2018-11365](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11365), [CVE-2018-11468](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11468), [CVE-2018-11503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11503), [CVE-2018-11504](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11504), [CVE-2018-11536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11536), [CVE-2018-11545](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11545)
+[CVE-2018-11546](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11546), [CVE-2018-11813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11813), [CVE-2018-12064](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12064), [CVE-2018-12092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12092), [CVE-2018-12093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12093), [CVE-2018-12108](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12108)
+[CVE-2018-12109](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12109), [CVE-2018-12495](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12495), [CVE-2018-12503](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12503), [CVE-2018-12504](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12504), [CVE-2018-12687](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12687), [CVE-2018-12688](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12688)
+[CVE-2018-13030](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13030), [CVE-2018-13037](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13037), [CVE-2018-13419](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13419), [CVE-2018-13420](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13420), [CVE-2018-13421](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13421), [CVE-2018-13794](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13794), 
+[CVE-2018-13795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13795), [CVE-2018-13833](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13833), [CVE-2018-13843](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13843), [CVE-2018-13844](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13844), [CVE-2018-13845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13845), [CVE-2018-13846](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13846)
+[CVE-2018-13847](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13847), [CVE-2018-13848](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13848), [CVE-2018-13996](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13996), [CVE-2018-13997](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13997), [CVE-2018-14047](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14047), [CVE-2018-14048](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14048)
+[CVE-2018-14049](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14049), [CVE-2018-14050](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14050), [CVE-2018-14051](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14051), [CVE-2018-14052](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14052), [CVE-2018-14072](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14072), [CVE-2018-14073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14073)
+[CVE-2018-14521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14521), [CVE-2018-14522](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14522), [CVE-2018-14523](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14523), [CVE-2018-14531](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14531), [CVE-2018-14532](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14532), [CVE-2018-14549](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14549)
+[CVE-2018-14550](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14550), [CVE-2018-14562](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14562), [CVE-2018-14563](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14563), [CVE-2018-14564](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14564), [CVE-2018-14565](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14565), [CVE-2018-14584](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14584)
+[CVE-2018-14585](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14585),[CVE-2018-14586](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14586), [CVE-2018-14587](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14587), [CVE-2018-14588](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14588), [CVE-2018-14589](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14589), [CVE-2018-14590](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14590)
+[CVE-2018-14736](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14736), [CVE-2018-14737](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14737), [CVE-2018-14738](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14738), [CVE-2018-14739](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14739) [CVE-2018-14740](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14740), [CVE-2018-14741](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14741)
+[CVE-2018-14742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14742), [CVE-2018-14743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14743), [CVE-2018-14744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14744), [CVE-2018-14944](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14944) [CVE-2018-14945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14945), [CVE-2018-14946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14946)
+[CVE-2018-14947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14947), [CVE-2018-14948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14948), [CVE-2018-16781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16781), [CVE-2018-16782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16782), [CVE-2018-17042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17042), [CVE-2018-17043](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17043)
+[CVE-2018-17072](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17072), [CVE-2018-17073](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17073), [CVE-2018-17093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17093), [CVE-2018-17094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17094), [CVE-2018-17095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17095), [CVE-2018-17338](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17338)
+[CVE-2018-17427](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17427), [CVE-2018-17854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17854), [CVE-2018-18581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18581), [CVE-2018-18582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18582), [CVE-2018-18583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18583), [CVE-2018-18834](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18834)
+[CVE-2018-18937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18937), [CVE-2018-19093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19093), [CVE-2018-19121](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19121), [CVE-2018-19122](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19122), [CVE-2018-19184](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19184), [CVE-2018-19185](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19185), 
+[CVE-2018-19330](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19330), [CVE-2018-19764](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-19764), [CVE-2018-20004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20004), [CVE-2018-7705](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7705), [CVE-2018-7706](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7706), [CVE-2018-7707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7707)
+[CVE-2018-7708](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7708), [CVE-2018-7709](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7709)
