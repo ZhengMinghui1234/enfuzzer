@@ -94,7 +94,6 @@ The detail use of Enfuzz Server can be found in https://github.com/131250106/enf
 |[CVE-2018-14946](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14946)|pdf2json|Alloc_dealloc_mismatch|
 |[CVE-2018-14947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14947)|pdf2json|Alloc_dealloc_mismatch|
 |[CVE-2018-14948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14948)|sound|Alloc-dealloc-mismatch|
-
 |[CVE-2018-16781](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16781)|ffjpeg|FPE signal|
 |[CVE-2018-16782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16782)|imageworsener overflow|
 |[CVE-2018-17042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-17042)|dbf2txt|infinite loop	|
